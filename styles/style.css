@@ -35,19 +35,19 @@ body {
     background: #000;
 }
 
-.logo, .cart, .btn, .search-input, .checkbox-text, .checkbox-rounded, .pagination__btn, .pagination__link, .icon-template, .footer__link, .copyright__link {
+.logo, .cart, .btn, .search-input, .view-selector__show-count, .display-option, .checkbox-text, .checkbox-rounded, .pagination__btn, .pagination__link, .icon-template, .footer__link, .copyright__link {
     opacity: .8
 }
 
-.logo:hover, .cart:hover, .btn:hover, .search-input:hover, .checkbox-text:hover, .checkbox-rounded:hover, .pagination__btn:hover, .pagination__link:hover, .icon-template:hover, .footer__link:hover, .copyright__link:hover {
+.logo:hover, .cart:hover, .btn:hover, .search-input:hover, .view-selector__show-count:hover, .display-option:hover, .checkbox-text:hover, .checkbox-rounded:hover, .pagination__btn:hover, .pagination__link:hover, .icon-template:hover, .footer__link:hover, .copyright__link:hover {
     opacity: 1
 }
 
-.logo:active, .cart:active, .btn:active, .search-input:active, .checkbox-text:active, .checkbox-rounded:active, .pagination__btn:active, .pagination__link:active, .icon-template:active, .footer__link:active, .copyright__link:active {
+.logo:active, .cart:active, .btn:active, .search-input:active, .view-selector__show-count:active, .display-option:active, .checkbox-text:active, .checkbox-rounded:active, .pagination__btn:active, .pagination__link:active, .icon-template:active, .footer__link:active, .copyright__link:active {
     opacity: 1
 }
 
-.logo:focus, .cart:focus, .btn:focus, .search-input:focus, .checkbox-text:focus, .checkbox-rounded:focus, .pagination__btn:focus, .pagination__link:focus, .icon-template:focus, .footer__link:focus, .copyright__link:focus {
+.logo:focus, .cart:focus, .btn:focus, .search-input:focus, .view-selector__show-count:focus, .display-option:focus, .checkbox-text:focus, .checkbox-rounded:focus, .pagination__btn:focus, .pagination__link:focus, .icon-template:focus, .footer__link:focus, .copyright__link:focus {
     outline: none;
 }
 
@@ -314,11 +314,11 @@ body {
 }
 
 .search-form {
-    /* display: block; */
     padding: 1rem 2rem .5rem;
     height: 78px;
     box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
     border-radius: 10px;
+    margin: 3rem 0;
 }
 
 .search-input {
@@ -335,9 +335,14 @@ body {
     color: white;
 }
 
+.tags-bar {
+    padding: 0 2rem;
+}
+
 .tag-bar__title {
     font-size: 18px;
     font-weight: bold;
+    margin-top: 1rem;
     margin-left: 1.4rem;
 }
 
@@ -408,7 +413,7 @@ body {
     gap: 10px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 700px) {
 
     .grid-in {
         grid-template-columns: repeat(2, 1fr);
@@ -424,7 +429,7 @@ body {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 950px) {
     .grid-in {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: minmax(min-content, min-content);
@@ -437,6 +442,38 @@ body {
     .pagination {
         grid-column: 1/4;
     }
+}
+
+.view-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.view-selector__show-options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.view-selector__text {
+    margin: 0 1rem 1rem 0;
+}
+
+.view-selector__show-count {
+    text-decoration: none;
+    margin-left: .5rem;
+    color: inherit;
+}
+
+.display-option {
+    margin: 0 0 1rem 1.5rem;
+}
+
+.view-selector__display-options {
+    display: flex;
+    align-items: center;
 }
 
 .course-card {
@@ -478,10 +515,12 @@ body {
     align-items: center;
     height: 73px;
     padding-left: 2rem;
+    padding-right: 2rem;
     position: absolute;
     right: 0;
     left: 0;
     bottom: 0;
+    text-decoration: none;
 }
 
 .course-card__text {
