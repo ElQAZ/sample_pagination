@@ -4,13 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalyze.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 
 <body>
-
+    <header class="header">
+        <div class="container">
+            <div class="header--display">
+                <a href="#" class="logo">
+                    <img src="uploads/logo.png" alt="Logo" class="logo__img">
+                </a>
+                <nav class="menu">
+                    <a href="#" class="menu__item">Home</a>
+                    <a href="#" class="menu__item menu__item--active">Courses</a>
+                    <a href="#" class="menu__item">Blog</a>
+                    <a href="#" class="menu__item">About Us</a>
+                    <a href="#" class="menu__item">Contact Us</a>
+                    <a href="#" class="cart">
+                        <span class="cart__img"></span>
+                        <span class="cart__count">12</span>
+                    </a>
+                </nav>
+                <div class="btn-group">
+                    <a href="#" class="btn btn--narrow bg-orange">Be A Contributor</a>
+                    <a href="#" class="btn btn--narrow bg-orange">Log In</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <div class="section section--cources">
+            <div class="bg-orange">
+                <div class="container container--width1168px">
+                        <div class="section__block head">
+                            <h1 class="title">Browse Thousands of Our Video Tutorials Curated Only for you.</h1>
+                            <p class="subtitle">
+                                Access all tutorials and resources when you become a premium member of 
+                                <a href="#" class="tag">Semaj Africa.</a>
+                            </p>
+                            <!-- <div class="pagination">
+                                <a href="#" class="pagination__btn pagination__btn--prev"></a>
+                                <a href="#" class="pagination__btn pagination__btn--next"></a>
+                            </div> -->
+                        </div>
+                </div>
+            </div>
+            <div class="bg-white">
+                <div class="container container--width1168px">
+                    <div class="section__block grid">
+                        <div class="search-form bg-orange grid__item">
+                            <form>
+                                <input type="search" class="search-input" name="search" placeholder="Search for Courses i.e web-development">
+                            </form>
+                        </div>
+                        <div class="course-view grid__item"></div>
+                        <div class="tags-bar grid__item">
+                            <form>
+                                <!-- <a href="#" class="tag">All Courses</a> -->
+                                <label class="radio-label">
+                                    <input class="radio hidden" type="radio">
+                                    <span class="radio-title">Web Development (2908)</span>
+                                </label>
+                                <!-- <h4 class="tag-bar__title">All Courses</h4> -->
+                                <label class="checkbox-label">
+                                    <input class="checkbox hidden" type="checkbox">
+                                    <span class="checkbox-text">Web Development (2908)</span>
+                                </label>
+                                <!-- <a href="#" class="tag">Web Development (2908)</a>
+                                <a href="#" class="tag">Design (11293)</a>
+                                <a href="#" class="tag">Photography (2230)</a>
+                                <a href="#" class="tag">3d Artist (9828)</a>
+                                <a href="#" class="tag">Motion Graphics (8223)</a>
+                                <a href="#" class="tag">Software Engineer (1001)</a>
+                                <a href="#" class="tag">UI/UX RoadMap (734)</a>
+                                <a href="#" class="tag">Sound & Music (1223)</a>
+                                <a href="#" class="tag">Digital Marketing (382)</a> -->
+                                <h4 class="tag-bar__title">Course Type</h4>
+                                <div class="type-selector">
+                                    <a href="#" class="tag">Paid</a>
+                                    <a href="#" class="tag">Free</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="bg-dark">
+            <div class="container container--width1260px">
+                <div class="footer__section">
+                    <div class="footer__follow-block">
+                        <a href="#" class="logo">
+                            <img src="uploads/logo.png" alt="Logo" class="logo__img">
+                        </a>
+                        <p class="footer__descript">Goge Africa is an online education platform that delivers video
+                            courses, programs and resources</p>
+                        <ul class="list list--follow-list">
+                            <li class="list__item">
+                                <a href="#" class="icon-template icon-template--footer icon-template--facebook"></a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="icon-template icon-template--footer icon-template--tweeter"></a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="icon-template icon-template--footer icon-template--youtube"></a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="icon-template icon-template--footer icon-template--dribbble"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__links-block">
+                        <h5 class="footer__title">Quicklinks</h5>
+                        <ul class="list list--quicklink-list">
+                            <li class="list__link">
+                                <a href="#" class="footer__link">Home</a>
+                            </li>
+                            <li class="list__link">
+                                <a href="#" class="footer__link">Courses</a>
+                            </li>
+                            <li class="list__link">
+                                <a href="#" class="footer__link">About Us</a>
+                            </li>
+                            <li class="list__link">
+                                <a href="#" class="footer__link">Contacts Us</a>
+                            </li>
+                            <li class="list__link">
+                                <a href="#" class="footer__link">Become A Contributor</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__contacts-block">
+                        <h5 class="footer__title">Contacts Us</h5>
+                        <a href="tel:+55254254254" class="footer__link">(+55) 254 254 254</a>
+                        <a href="mailto:info@lseimajafrica.com" class="footer__link">Info@lseimajafrica.com</a>
+                        <span class="footer__text">Helios Tower 75 Tam Trinh Hoang</span>
+                        <span class="footer__text">Mai - Ha Noi - Viet Nam</span>
+                    </div>
+                    <div class="footer__terms-block">
+                        <a href="#" class="footer__link">Terms</a>
+                        <a href="#" class="footer__link">Faq</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black">
+            <div class="container container--width1260px">
+                <div class="copyright__section">
+                    <a href="#" class="copyright__link copyright__link--primary-left">All Rights Reserved | GOGE AFRICA 2019</a>
+                    <a href="#" class="copyright__link">Privacy Policy</a>
+                    <a href="#" class="copyright__link copyright__link--site">Site </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
