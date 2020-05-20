@@ -210,10 +210,37 @@ body {
     box-shadow: 0 12px 35px rgba(160, 121, 0, 0.2);
 }
 
+.btn--round, .btn--w100px {
+    border: 1px solid #E0E0E0;
+    color: #5c5c5c;
+    font-weight: normal;
+    box-shadow: none;
+}
+
+.btn--round, .btn--w100px {
+    width: 56px;
+}
+
+.btn--w100px {
+    width: 100px;
+}
+
+.btn--active {
+    background: linear-gradient(229.9deg, #FFC000 1.55%, #FF8A00 95.8%);
+    border: 1px solid transparent;
+    color: #fff;
+}
+
 /* --- Content --- */
 
 .section__block {
-    padding: 115px 0;
+    padding: 50px 0;
+}
+
+@media screen and (min-width: 900px) {
+    .section__block {
+        padding: 115px 0;;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -254,13 +281,24 @@ body {
     font-weight: bold;
 }
 
+/* - Grid - */
+
 .grid {
     display: grid;
-    grid-template-columns: 1fr minmax(max-content, max-content);
-    /* grid-template-rows: auto auto; */
-    grid-template-areas:    "search-form search-form"
-                            "course-view tags-bar";
+    grid-template-columns: 1fr;
+    grid-template-areas:    "search-form"
+                            "tags-bar"
+                            "course-view";
     margin: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr minmax(max-content, max-content);
+        grid-template-areas:    "search-form search-form"
+                                "course-view tags-bar";
+    }
 }
 
 .search-form {
@@ -295,15 +333,6 @@ body {
 
 .search-input::placeholder {
     color: white;
-}
-
-
-
-
-.course-view {
-    /* width: 303px; */
-    /* height: 279px; */
-    background: gray;
 }
 
 .tag-bar__title {
@@ -368,14 +397,110 @@ body {
     border: 1px solid orange;
 }
 
+.tags-bar .btn {
+    margin-left: 1.4rem;
+}
+
+/* - Course View-  */
+
+.grid-in {
+    display: grid;
+    gap: 10px;
+}
+
+@media screen and (min-width: 640px) {
+
+    .grid-in {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: minmax(min-content, min-content);
+    }
+    
+    .view-selector {
+        grid-column: 1/3;
+    }
+    
+    .pagination {
+        grid-column: 1/3;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .grid-in {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: minmax(min-content, min-content);
+    }
+    
+    .view-selector {
+        grid-column: 1/4;
+    }
+    
+    .pagination {
+        grid-column: 1/4;
+    }
+}
+
+.course-card {
+    height: 279px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pic-link {
+    /* position: relative; */
+    /* height: 206px; */
+    overflow: hidden;
+}
+
+.pic {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tag-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.tag-in .tag {
+    color: #fff;
+    font-weight: bold;
+    padding: .5rem 1.5rem;
+    border-bottom-left-radius: 10px;
+}
+
+.course-card__descript {
+    display: flex;
+    align-items: center;
+    height: 73px;
+    padding-left: 2rem;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.course-card__text {
+    line-height: 21px;
+    color: white;
+}
 
 .pagination {
     display: flex;
-    align-items: center;
-    padding: 0 10px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
-.pagination__btn {
+.pagination .btn {
+    margin-left: 0;
+}
+
+/* .pagination__btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,7 +523,7 @@ body {
     margin-left: 10px;
     background: url(../design/ic-next.svg) center no-repeat, linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
     box-shadow: 0 12px 35px rgba(160, 121, 0, 0.2);
-}
+} */
 
 .icon-template {
     width: 19px;
@@ -425,7 +550,7 @@ body {
     background: url(../design/ic-dribbble.png) center no-repeat;
 }
 
-.pagination--flex {
+/* .pagination--flex {
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
@@ -450,7 +575,7 @@ body {
 
 .pagination__title--next {
     color: orange;
-}
+} */
 
 /* --- Footer --- */
 
