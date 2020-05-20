@@ -306,6 +306,11 @@ body {
     background: gray;
 }
 
+.tag-bar__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 1.4rem;
+}
 
 .hidden {
     display: none;
@@ -313,7 +318,6 @@ body {
 
 .checkbox-text {
     user-select: none;
-    margin-left: 1rem;
 }
 
 .checkbox-label {
@@ -326,25 +330,57 @@ body {
     /* border: 2px solid #5c5c5c; */
     width: 1rem;
     height: 1rem;
-    /* border-radius: 2px; */
     line-height: 1rem;
     font-size: 1rem;
     text-align: center;
     color: transparent;
     user-select: none;
-    margin-right: 5px;
+    /* margin-right: .2rem; */
+    margin: 1rem .2rem;
 }
 
 .checkbox:checked+.checkbox-text::before {
     color: orange;
 }
 
-.tags-bar .tag {
-    display: block;
-    margin: 1.5rem 0;
+.type-selector {
+    margin-left: 1.4rem;
 }
 
-.type-selector .tag {
+.checkbox-label--inline {
+    display: inline-block;
+}
+
+.checkbox-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 43px;
+    border: 1px solid #5c5c5c;
+    margin-top: 0;
+    margin-right: .5rem;
+    font-size: 11px;
+    overflow: hidden;
+}
+
+/* .checkbox-tag {
+    user-select: none;
+} */
+
+.checkbox:checked+.checkbox-rounded {
+    background: linear-gradient(228.4deg, #FFC000 1.55%, #FF8A00 95.8%);
+    color: white;
+    border: 1px solid orange;
+}
+
+/* .tags-bar .tag {
+    display: block;
+    margin: 1.5rem 0;
+} */
+
+/* .type-selector .tag {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -356,17 +392,8 @@ body {
     margin-right: .5rem;
     font-size: 11px;
     
-}
-
-/* .tag-bar__title {
-    font-size: 18px;
-    font-weight: bold;
 } */
 
-.radio-title {
-    font-size: 18px;
-    font-weight: bold;
-}
 
 .pagination {
     display: flex;
